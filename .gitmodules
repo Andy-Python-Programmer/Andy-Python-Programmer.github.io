@@ -1,3 +1,3 @@
-[submodule "themes/oceanic-zen" ]
+[submodule "oceanic-zen"]
 	path = "themes/oceanic-zen"
 	url = "https://github.com/barlog-m/oceanic-zen"
