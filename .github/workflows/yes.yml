@@ -5,8 +5,6 @@ jobs:
     name: shalzz/zola-deploy-action
     runs-on: ubuntu-latest
     steps:
-    - name: yes
-      run: git submodule update --init --recursive
     - uses: actions/checkout@master
     - name: shalzz/zola-deploy-action
       uses: shalzz/zola-deploy-action@master
