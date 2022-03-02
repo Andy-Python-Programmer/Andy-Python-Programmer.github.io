@@ -1,3 +1,3 @@
 ## C
 
-Just use rust
+Better than Rust
