@@ -1,3 +1,0 @@
-## C
-
-Just use rust
