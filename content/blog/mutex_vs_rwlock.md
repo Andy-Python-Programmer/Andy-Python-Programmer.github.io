@@ -1,6 +1,14 @@
 +++
-title = "Mutex VS RwLock"
-date = 2022-04-06
+title = ""
+date = 2022-01-01
+
+[taxonomies]
+categories = ["Mutex vs RWLock"]
+tags = ["rust", "mutex", "rwlock", "locking", "c", "c++"]
+
+[extra]
+lang = "en"
+toc = true
 +++
 
 The difference between `Mutex` and a `RwLock` is that `RwLock<T>` requires more bounds for `T` to
