@@ -6,7 +6,7 @@ compile_sass = true
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
-theme = "oceanic-zen"
+theme = "serene"
 
 [markdown]
 # Whether to do syntax highlighting
@@ -14,6 +14,18 @@ theme = "oceanic-zen"
 highlight_code = true
 
 [extra]
-author = "Andy"
-github = "Andy-Python-Programmer"
-# Put all your custom variables here
+name = "Andy"
+links = [
+    { name = "GitHub", icon = "ri-github-line", url = "https://github.com/Andy-Python-Programmer" },
+]
+
+avatar = "https://avatars.githubusercontent.com/u/62820092?v=4"
+id = "Andy-Python-Programmer#4223"
+bio = "14 year old programmer and free software enthusiast"
+
+#=========================================================================================
+# Footer
+#=========================================================================================
+footer_copyright_name = "Andy"
+footer_copyright_year = "2022"
+footer_credits = true
