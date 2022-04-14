@@ -1,0 +1,3 @@
+[submodule "serene"]
+	path = "themes/serene"
+	url = "https://github.com/isunjn/serene"
