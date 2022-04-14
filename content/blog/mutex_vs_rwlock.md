@@ -22,8 +22,8 @@ is in locked state, the thread hangs until the locked thread releases the mutex;
 Next, `RwLock` is more complex then a `Mutex` hence, the performence is poor then a mutex. When there are more read 
 operations and fewer write operations, read-write locks are efficient and can be used to improve thread read concurrency.
 
-After summing up all of the facts, use `Mutex` when there are more write operations and a `RwLock` when there are more
-read operations.
+After summing up all of the facts, use `Mutex` when there are more or equal amount of write operations and a `RwLock` when 
+there are more read operations.
 
 ## Resources
 
