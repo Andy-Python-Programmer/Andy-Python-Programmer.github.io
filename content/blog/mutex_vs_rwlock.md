@@ -2,6 +2,10 @@
 title = ""
 date = 2022-01-01
 
+[taxonomies]
+categories = ["Mutex vs RWLock"]
+tags = ["rust", "mutex", "rwlock", "locking", "c", "c++"]
+
 [extra]
 lang = "en"
 toc = true
