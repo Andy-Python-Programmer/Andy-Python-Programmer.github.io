@@ -26,8 +26,22 @@
                     }
                 }
 
-                let body = document.getElementsByTagName("body")[0];
-                body.innerHTML = `<img src='https://img.shields.io/static/v1?label=${encodeURIComponent("lines of code")}&message=${formatter.format(loc)}&color=blue'></img>`;
+                fetch(`https://img.shields.io/static/v1?label=${encodeURIComponent("lines of code")}&message=${formatter.format(loc)}&color=blue`)
+                    .then(result => result.text())
+                    .then(result => {
+                        // Convert the HTML string into a document object
+                        var parser = new DOMParser();
+                        var doc = parser.parseFromString(result, 'text/html');
+
+                        var i = document.childNodes.length - 1;
+
+                        while (i >= 0) {
+                            document.removeChild(document.childNodes[i--]);
+                        }
+
+                        document.appendChild(doc.getElementsByTagName('svg')[0]);
+                    })
+                    .catch(err => { throw err })
             })
             .catch(err => { throw err });
     </script>   
