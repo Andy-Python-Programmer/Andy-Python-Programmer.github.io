@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOC</title>
+</head>
+<body>
+    <script>
+        let url = "https://api.github.com/repos/Andy-Python-Programmer/aero/stats/contributors";
+        let formatter = Intl.NumberFormat('en', { notation: 'compact' });
+
+        // https://docs.github.com/en/rest/metrics/statistics?apiVersion=2022-11-28#get-all-contributor-commit-activity
+        fetch(url)
+            .then(result => result.json())
+            .then(json => {
+                let loc = 0;
+
+                for (let i = 0; i < json.length; i++) {
+                    let author = json[i];
+                    
+                    for (let j = 0; j < author.weeks.length; j++) {
+                        let week = author.weeks[j];
+                        loc += week.a - week.d;
+                    }
+                }
+
+                let body = document.getElementsByTagName("body")[0];
+                body.innerHTML = `<img src='https://img.shields.io/static/v1?label=${encodeURIComponent("lines of code")}&message=${formatter.format(loc)}&color=blue'></img>`;
+            })
+            .catch(err => { throw err });
+    </script>   
+</body>
+</html>
