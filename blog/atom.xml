@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - Blog</title>
+    <link href="https://andypy.dev/blog/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://andypy.dev/blog/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2022-01-01T00:00:00+00:00</updated>
+    <id>https://andypy.dev/blog/atom.xml</id>
+    <entry xml:lang="en">
+        <title></title>
+        <published>2022-01-01T00:00:00+00:00</published>
+        <updated>2022-01-01T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://andypy.dev/blog/mutex-vs-rwlock/" type="text/html"/>
+        <id>https://andypy.dev/blog/mutex-vs-rwlock/</id>
+        
+        <content type="html">&lt;p&gt;The difference between &lt;code&gt;Mutex&lt;&#x2F;code&gt; and a &lt;code&gt;RwLock&lt;&#x2F;code&gt; is that &lt;code&gt;RwLock&amp;lt;T&amp;gt;&lt;&#x2F;code&gt; requires more bounds for &lt;code&gt;T&lt;&#x2F;code&gt; to
+be thread safe; &lt;code&gt;Mutex&lt;&#x2F;code&gt; requires &lt;code&gt;T: Send&lt;&#x2F;code&gt; to be &lt;code&gt;Sync&lt;&#x2F;code&gt; while on the other hand &lt;code&gt;RwLock&lt;&#x2F;code&gt; requires
+&lt;code&gt;T: Send + Sync&lt;&#x2F;code&gt; to be &lt;code&gt;Sync&lt;&#x2F;code&gt;. &lt;&#x2F;p&gt;
+&lt;p&gt;To begin with, &lt;code&gt;Mutex&lt;&#x2F;code&gt; is a method of locking, to control access to shared resources. At the same time, only one thread
+can access data that is protected inside the mutex. If another thread wants to lock a resource and the mutex
+is in locked state, the thread hangs until the locked thread releases the mutex; threads using mutex lack read concurrency.&lt;&#x2F;p&gt;
+&lt;p&gt;Next, &lt;code&gt;RwLock&lt;&#x2F;code&gt; is more complex then a &lt;code&gt;Mutex&lt;&#x2F;code&gt; hence, the performence is poor then a mutex. When there are more read 
+operations and fewer write operations, read-write locks are efficient and can be used to improve thread read concurrency.&lt;&#x2F;p&gt;
+&lt;p&gt;After summing up all of the facts, use &lt;code&gt;Mutex&lt;&#x2F;code&gt; when there are more or equal amount of write operations and a &lt;code&gt;RwLock&lt;&#x2F;code&gt; when 
+there are more read operations.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;sync&#x2F;struct.Mutex.html&quot;&gt;Mutex&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;sync&#x2F;struct.RwLock.html&quot;&gt;RwLock&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+</feed>

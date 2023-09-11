@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title></title>
+    <meta name="description" content="">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Jost&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/var.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/header.css" />
+<link rel="stylesheet" href="/css/footer.css" />
+<link rel="stylesheet" href="/css/post.css" />
+    
+    
+    
+</head>
+
+<body>
+    <script>if(localStorage.getItem('theme')=='dark'){document.body.classList.add('dark-mode');}</script>
+    
+<header  class="blur" >
+    <div class="top">
+        <a class="header blog" href="/blog"><i class="ri-quill-pen-line ri-2x"></i><span>Blog</span></a>
+        <a class="back" href="/"><i class="ri-arrow-left-s-line ri-1x"></i><span>Home</span></a>
+        <div class="icon">
+            <a id="go-home" href="/" aria-label="home" ><i class="ri-user-6-line ri-xl"></i></a>
+            <a href="/blog/atom.xml" aria-label="rss feed" ><i class="ri-rss-line ri-xl"></i></a>
+            <button id="color-toggle" aria-label="dark light mode switch"><i class="ri-moon-line ri-xl"></i></button>
+            <button id="toc-toggle" aria-label="table of content"><i class="ri-menu-2-line ri-xl"></i></button>
+            </div>
+    </div>
+    <div id="progress-bar"></div>
+</header>
+
+<div class="wrap">
+    <div class="blank"></div>
+    <main>
+        <div id="top"></div>
+        <article>
+            <h1></h1>
+            <div id="post-info">
+                <div class="date">
+                    <span id="publish">2022-01-01</span>
+                    </div>
+                <div class="tags">
+                    <a class="tag" href="https://andypy.dev/tags/rust"><i class="ri-hashtag ri-sm"></i><span>rust</span></a><a class="tag" href="https://andypy.dev/tags/mutex"><i class="ri-hashtag ri-sm"></i><span>mutex</span></a><a class="tag" href="https://andypy.dev/tags/rwlock"><i class="ri-hashtag ri-sm"></i><span>rwlock</span></a><a class="tag" href="https://andypy.dev/tags/locking"><i class="ri-hashtag ri-sm"></i><span>locking</span></a><a class="tag" href="https://andypy.dev/tags/c"><i class="ri-hashtag ri-sm"></i><span>c</span></a><a class="tag" href="https://andypy.dev/tags/c"><i class="ri-hashtag ri-sm"></i><span>c++</span></a>
+                </div>
+            </div>    
+
+            
+            
+            <p>The difference between <code>Mutex</code> and a <code>RwLock</code> is that <code>RwLock&lt;T&gt;</code> requires more bounds for <code>T</code> to
+be thread safe; <code>Mutex</code> requires <code>T: Send</code> to be <code>Sync</code> while on the other hand <code>RwLock</code> requires
+<code>T: Send + Sync</code> to be <code>Sync</code>. </p>
+<p>To begin with, <code>Mutex</code> is a method of locking, to control access to shared resources. At the same time, only one thread
+can access data that is protected inside the mutex. If another thread wants to lock a resource and the mutex
+is in locked state, the thread hangs until the locked thread releases the mutex; threads using mutex lack read concurrency.</p>
+<p>Next, <code>RwLock</code> is more complex then a <code>Mutex</code> hence, the performence is poor then a mutex. When there are more read 
+operations and fewer write operations, read-write locks are efficient and can be used to improve thread read concurrency.</p>
+<p>After summing up all of the facts, use <code>Mutex</code> when there are more or equal amount of write operations and a <code>RwLock</code> when 
+there are more read operations.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://doc.rust-lang.org/std/sync/struct.Mutex.html">Mutex</a></li>
+<li><a href="https://doc.rust-lang.org/std/sync/struct.RwLock.html">RwLock</a></li>
+</ul>
+
+        </article>
+    </main>
+    <aside  class="blur" > 
+        <nav>
+            <ul>
+                <li>
+                    <a class="toc-h2" href="#resources">Resources</a>
+                </li>
+            </ul>
+        </nav>
+        <a id="back-to-top" aria-label="back to top" href="#top"><i class="ri-arrow-up-s-line ri-2x"></i></a>
+    </aside>
+</div>
+<footer>
+    <div class="copyright">
+        Copyright © 2022 Andy. All rights reserved.
+    </div>
+    <div class="credits">
+        <span>Powered by <a href="https://www.getzola.org/" target="_blank" rel='noreferrer noopener'>Zola</a> and <a href="https://github.com/isunjn/serene" target="_blank" rel='noreferrer noopener'>Serene</a></span>
+    </div>
+</footer>
+<script src="/js/dark.js"></script>   
+<script src="/js/toc.js"></script>
+<script src="/js/progress.js"></script>
+<script src="/js/lightense.min.js"></script>
+<script src="/js/img.js"></script>
+</body>
+
+</html>
