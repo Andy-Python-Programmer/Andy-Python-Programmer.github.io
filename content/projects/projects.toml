@@ -1,6 +1,7 @@
-[[project]]
-name = "Aero"
-desc = """
+[[collection]]
+type = "card"
+title = "Aero"
+content = """
 Aero is a new modern, experimental, unix-like operating system following the monolithic kernel design. 
 Supporting modern PC features such as long mode, 5-level paging, and SMP (multicore), to name a few.
 """
@@ -8,10 +9,12 @@ links = [
     { name = "GitHub", url = "https://github.com/Andy-Python-Programmer/aero" },
     { name = "Documentation", url = "https://aero.andypy.dev" },
 ]
+tags = ["rust", "osdev"]
 
-[[project]]
-name = "Call of Ferris"
-desc = """
+[[collection]]
+type = "card"
+title = "Call of Ferris"
+content = """
 A thrilling action game where your favorite Ferris the crab and the rust mascot got guns and has taken 
 up the duty to find evildoer languages while managing to keep itself alive. Take part in this awesome 
 adventure and help Ferris be the best ever!
@@ -19,3 +22,4 @@ adventure and help Ferris be the best ever!
 links = [
     { name = "GitHub", url = "https://github.com/Andy-Python-Programmer/CallOfFerris" },
 ]
+tags = ["rust", "game"]

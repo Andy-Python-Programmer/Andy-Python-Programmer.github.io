@@ -1,36 +1,53 @@
-# The URL the site will be built for
 base_url = "https://andypy.dev"
-
-# Whether to automatically compile all Sass files in the sass directory
-compile_sass = true
-
-taxonomies = [
-#   {name = "categories", rss = true},
-    {name = "tags", rss = true},
-]
-
-# Whether to build a search index to be used later on by a JavaScript library
-build_search_index = true
+default_language = "en"
 theme = "serene"
+output_dir = "public"
+compile_sass = true
+minify_html = false # Keep this false, as it may cause issues with some styles
+build_search_index = false # Keep this false, search is temporarily unsupported
+generate_feeds = false # Whether to generate a feed file in root, read docs for more info about rss feed
+feed_filenames = ["feed.xml"] # "feed.xml" | "atom.xml" | "rss.xml", read docs for more info
+taxonomies = [{ name = "tags" }, { name = "categories" }]
 
 [markdown]
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = true
+highlight_theme = "css"
+extra_syntaxes_and_themes = ["highlight_themes"]
+highlight_themes_css = [
+  { theme = "serene-light", filename = "hl-light.css" },
+  { theme = "serene-dark", filename = "hl-dark.css" },
+]
+render_emoji = false
+external_links_target_blank = false
+external_links_no_follow = true
+external_links_no_referrer = true
+smart_punctuation = false
+
+[slugify]
+paths = "on"
+taxonomies = "on"
+anchors = "on"
+
+#=========================================================================================
 
 [extra]
-name = "Andy"
-links = [
-    { name = "GitHub", icon = "ri-github-line", url = "https://github.com/Andy-Python-Programmer" },
+
+sections = [
+  { name = "blog", path = "/blog" },
+  { name = "projects", path = "/projects" },
 ]
 
-avatar = "https://avatars.githubusercontent.com/u/62820092?v=4"
-id = "Andy-Python-Programmer#4223"
-bio = "17 year old programmer and free software enthusiast"
+blog_section_path = "/blog"
 
-#=========================================================================================
-# Footer
-#=========================================================================================
-footer_copyright_name = "Andy"
-footer_copyright_year = "2022"
-footer_credits = true
+back_link_text = "Back" # Text of the back button
+force_theme = false # false | "light" | "dark"
+
+footer_copyright = "© 2025 Anhad Singh"
+footer_credits = true # Whether to show "Built with zola and serene" in footer
+
+not_found_error_text = "404 not found"
+not_found_recover_text = "« back to home »"
+
+reaction = false # Whether to enable anonymous emoji reactions (Note: You need to set up a working api endpoint to enable this feature)
+reaction_align = "right" # "left" | "center" | "right"
+reaction_endpoint = "https://example.com/api/reaction"
