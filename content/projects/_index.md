@@ -1,7 +1,11 @@
 +++
 title = "Projects"
-template = "projects.html"
+template = "prose.html"
 
 [extra]
-lang = 'en'
+title = "Projects"
+subtitle = "Some cool projects I made"
 +++
+
+{{ collection(file="projects.toml") }}
+
