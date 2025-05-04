@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://andypy.dev/</loc>
+    </url>
+    <url>
+        <loc>https://andypy.dev/blog/</loc>
+    </url>
+    <url>
+        <loc>https://andypy.dev/blog/mutex-vs-rwlock/</loc>
+        <lastmod>2022-01-01</lastmod>
+    </url>
+    <url>
+        <loc>https://andypy.dev/categories/</loc>
+    </url>
+    <url>
+        <loc>https://andypy.dev/projects/</loc>
+    </url>
+    <url>
+        <loc>https://andypy.dev/tags/</loc>
+    </url>
+    <url>
+        <loc>https://andypy.dev/tags/c/</loc>
+    </url>
+    <url>
+        <loc>https://andypy.dev/tags/locking/</loc>
+    </url>
+    <url>
+        <loc>https://andypy.dev/tags/mutex/</loc>
+    </url>
+    <url>
+        <loc>https://andypy.dev/tags/rust/</loc>
+    </url>
+    <url>
+        <loc>https://andypy.dev/tags/rwlock/</loc>
+    </url>
+</urlset>
