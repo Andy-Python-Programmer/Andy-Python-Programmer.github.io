@@ -10,5 +10,5 @@ links = [
 
 avatar = "img/avatar.png"
 id = "Andy-Python-Programmer#4223"
-bio = "17 year old programmer and free software enthusiast"
+bio = "18 year old programmer and free software enthusiast"
 +++
