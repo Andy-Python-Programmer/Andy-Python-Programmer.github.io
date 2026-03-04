@@ -9,6 +9,6 @@ links = [
 ]
 
 avatar = "img/avatar.png"
-id = "Andy-Python-Programmer#4223"
+id = "andypython"
 bio = "18 year old programmer and free software enthusiast"
 +++
