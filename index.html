@@ -1,0 +1,76 @@
+<!-- vim: set ts=4 sts=4 sw=4 et: -->
+<html>
+<style>
+body {
+    background-image: url('clouds.jpg');
+    background-size: cover;
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Iosevka Nerd Font', monospace;
+}
+
+.container {
+    background-color: black;
+    margin: 0 auto;
+    max-width: 100ch;
+    min-height: 100vh;
+    padding: 4ch 4ch;
+    box-sizing: border-box;
+}
+
+.content {
+    color: white;
+}
+
+#info {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+#info img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+#info #text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+#info #id {
+    color: #00d4ff;
+    margin-left: 0.75em;
+}
+
+#info #bio {
+    color: #aaa;
+}
+</style>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <section id="info">
+                <img src="avatar.png" alt="avatar">
+                <div id="text">
+                    <div>
+                        <span id="name">Anhad Singh</span>
+                        <span id="id">(aka. andypython)</span>
+                    </div>
+                    <div id="bio">18 year old programmer and free software enthusiast</div>
+                </div>
+            </section>
+
+            <h1>Links</h1>
+            <list>
+                <li><a href="https://github.com/Andy-Python-Programmer/">https://github.com/Andy-Python-Programmer/</a></li>
+                <li><a href="https://gitlab.redox-os.org/andypython/">https://gitlab.redox-os.org/andypython/</a></li>
+            </list>
+        </div>
+    </div>
+</body>
+</html>
+
